@@ -8,6 +8,7 @@ The API exposes two primary endpoints:
 
 * `/get_id`: Retrieves the ID associated with a product name.
 * `/get_info`: Retrieves specific information about a record based on its ID and column name.
+* `/get_pregnancy_data`: Retrieves pregnancy risk data for a drug.
 
 The path to the data file is configurable through an environment variable.
 
@@ -39,7 +40,7 @@ Returns the ID of the first matching row.
 #### Example Usage
 
 ```bash
-curl "http://simple-api-env.eba-p2wxw3ar.ap-southeast-2.elasticbeanstalk.com/get_id?name=Example"
+curl "http://simple-api-env.eba-p2wxw3ar.ap-southeast-2.elasticbeanstalk.com/get_id?name=Reactonz Women's Daily Vitality"
 ```
 
 ### 2. **GET /get_info**
@@ -57,9 +58,32 @@ Returns the value from the specified column for the given ID.
     "value": "value_from_column"
   }
   ```
+
 #### Example Usage:
 ```bash
-curl "http://simple-api-env.eba-p2wxw3ar.ap-southeast-2.elasticbeanstalk.com/get_info?id=123&column=Product Name"
+curl "http://simple-api-env.eba-p2wxw3ar.ap-southeast-2.elasticbeanstalk.com/get_info?id=483073&column=Sponsor Name"
+```
+
+### 3. **GET /get_pregnancy_data**
+
+Retrieve pregnancy risk data for a drug based on its name.
+#### Query Parameters:
+- `name` (required): The name or partial name of the drug to search for.
+
+#### Response:
+Returns the pregnancy risk data for the first matching drug.
+  ```json
+  {
+    "Category": "A",
+    "Classification Level 1": "X",
+    "Classification Level 2": "Y",
+    "Classification Level 3": "Z"
+  }
+  ```
+
+#### Example Usage:
+```bash
+curl "http://simple-api-env.eba-p2wxw3ar.ap-southeast-2.elasticbeanstalk.com/get_pregnancy_data?name=abacavir"
 ```
 
 ## Environment Variables
