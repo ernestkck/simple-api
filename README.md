@@ -40,7 +40,7 @@ Returns the ID of the first matching row.
 #### Example Usage
 
 ```bash
-curl "http://simple-api-env.eba-p2wxw3ar.ap-southeast-2.elasticbeanstalk.com/get_id?name=Reactonz Women's Daily Vitality"
+curl "http://{ENDPOINT}/get_id?name=Reactonz Women's Daily Vitality"
 ```
 
 ### 2. **GET /get_info**
@@ -61,7 +61,7 @@ Returns the value from the specified column for the given ID.
 
 #### Example Usage:
 ```bash
-curl "http://simple-api-env.eba-p2wxw3ar.ap-southeast-2.elasticbeanstalk.com/get_info?id=483073&column=Sponsor Name"
+curl "http://{ENDPOINT}/get_info?id=483073&column=Sponsor Name"
 ```
 
 ### 3. **GET /get_pregnancy_data**
@@ -83,7 +83,7 @@ Returns the pregnancy risk data for the first matching drug.
 
 #### Example Usage:
 ```bash
-curl "http://simple-api-env.eba-p2wxw3ar.ap-southeast-2.elasticbeanstalk.com/get_pregnancy_data?name=abacavir"
+curl "http://{ENDPOINT}/get_pregnancy_data?name=abacavir"
 ```
 
 ## Environment Variables
@@ -92,6 +92,4 @@ curl "http://simple-api-env.eba-p2wxw3ar.ap-southeast-2.elasticbeanstalk.com/get
 
 ## Deployment
 
-The API was deployed on AWS Elastic Beanstalk. The current base URL is:
-
-http://simple-api-env.eba-p2wxw3ar.ap-southeast-2.elasticbeanstalk.com
+The API was deployed on AWS using Elastic Beanstalk and S3. 
