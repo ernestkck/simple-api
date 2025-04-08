@@ -92,4 +92,4 @@ curl "http://{ENDPOINT}/get_pregnancy_data?name=abacavir"
 
 ## Deployment
 
-The API was deployed on AWS using Elastic Beanstalk and S3. 
+The API was deployed on AWS using Elastic Beanstalk, EC2 and S3. 

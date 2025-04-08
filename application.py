@@ -11,7 +11,7 @@ def index():
     return "Hello World!"
 
 
-# Get the csv/excel file path from an environment variable, default to 'data.xlsx'
+# Get the excel file path from an environment variable, default to 'data.xlsx'
 data_file = os.environ.get("DATA_FILE", "data.xlsx")
 
 try:
@@ -88,4 +88,5 @@ def get_pregnancy_data():
 
 if __name__ == "__main__":
     # Use 0.0.0.0 to make the app accessible externally
-    application.run(host="0.0.0.0", port=5000, debug=True)
+    # application.run(host="0.0.0.0", port=5000, debug=True)
+    pass
